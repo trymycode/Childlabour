@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="thirdStyle.css">
+	<title>Third page</title>
+</head>
+<body>
+        <div class="audio">
+        	
+			<audio autoplay>
+	          <source src="audio1.mp3" type="audio/mp3">
+	        </audio>
+		</div>
+	<div class="wrap">
+		<div id="arrow-left" class="arrow">
+			
+		</div>
+		<!-- <div id="nextpage"> <a href="last.html">Next</a></div> -->
+			<div id="slider">
+				
+					<div class="slide slide1">
+						<div class="slide-content">
+							<p class="para" id="firstPara">Say NO to child labour but say YES to child education!<br>STOP CHILD LABOUR!</p>
+						</div>
+					</div>
+						
+
+					<div class="slide slide2">
+						<div class="slide-content">
+							<p class="para">Child is meant to learn not to earn!<br>STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+
+					<div class="slide slide3">
+						<div class="slide-content">
+							<p class="para">Don't be wild, don't force to work a child!<br>STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+					
+					<div class="slide slide4">
+						<div class="slide-content">
+							<p class="para">For a better nation, <br>STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+
+					<div class="slide slide5">
+						<div class="slide-content">
+						<p class="para">Support and protect the pillars of our future country!<br> STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+					
+					<div class="slide slide6">
+						<div class="slide-content">
+						<p class="para">Enough is enough !<br>STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+					<div class="slide slide7">
+						<div class="slide-content">
+						<p class="para">Give them back their wings!<br>STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+
+					<div class="slide slide8">
+						<div class="slide-content">
+						<p class="para">Ban all forms of child labour.<br>STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+					
+					<div class="slide slide9">
+						<div class="slide-content">
+						<p class="para">Child labour is the biggest shame of our society!<br>STOP CHILD LABOUR!</p>
+						</div>
+						
+					</div>
+
+					<div class="slide slide10">
+						<div class="slide-content">
+							<p class="para">For the shake of our country's healthy future, <br>STOP CHILD LABOUR!</p>
+						</div>
+						<div class="over-layer"><a href="last.html"><img src="arrow.svg" alt="arrow"></a></div>
+					</div>
+
+
+
+			</div>
+
+
+
+
+
+		<div id="arrow-right" class="arrow">
+			<img src="arrow.svg" alt="arrow">
+		</div>
+	</div>
+
+	<script>
+		let sliderImages = document.querySelectorAll('.slide'),
+		arrowLeft = document.querySelector('#arrow-left'),
+		arrowRight = document.querySelector('#arrow-right'),
+		 firstPara = document.querySelector("#firstPara");
+		
+		current= 0;
+		setTimeout(function(){
+			
+				firstPara.style.opacity = "1";
+				firstPara.style.fontSize = "40px";
+				firstPara.style.color = "#cbd4d6";
+			
+		}, 1000);
+		//clear all images
+		 function reset(){
+		 	for(let i= 0; i < sliderImages.length; i++){
+		 		sliderImages[i].style.display ='none';
+		 	}
+		 }
+
+		 function startSlide(){
+		 	reset();
+		 	sliderImages[0].style.display='block';
+		 }
+		 // show prev
+		 function slideLeft(){
+		 	reset();
+		 	sliderImages[current - 1].style.display ='block';
+		 	current--;
+		 }
+
+		 //show next
+		 function slideRight(){
+		 	reset();
+		 	sliderImages[current + 1].style.display ='block';
+		 	current++;
+		 }
+		 // left arrow click
+		 arrowLeft.addEventListener('click', function(){
+		 	if(current === 0){
+		 		current = sliderImages.length;
+		 	}
+		 	slideLeft();
+
+		 });
+		 	// right arrow click
+		 	arrowRight.addEventListener('click', function(){
+		 	if(current === sliderImages.length - 1){
+		 		current = -1;
+		 	}
+		 	slideRight();
+
+		 });
+		 startSlide();
+
+	</script>
+		
+	
+</body>
+</html>

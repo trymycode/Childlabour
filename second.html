@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="secondStyle.css">
+	<title>Second page</title>
+</head>
+<body>
+	<div class="over-layer"><a href="third.html"><img src="arrow.svg" alt="arrow"></a></div>
+	<div class="container">
+		<ul class="fly-in-text hidden">
+		<li> SHOW A CHILD </li>
+		<li>LOVE & CARE</li>
+		<li>CHILDLABOUR </li>
+		<li> IS JUST NOT FAIR!</li>
+	</ul>
+
+</div>
+
+  <script>
+  	
+  		setTimeout(function(){
+  			var items = document.querySelectorAll('.fly-in-text')
+  			for(var i= 0; i< items.length; i++){
+  			items[i].classList.remove('hidden');
+	 	}
+  	}, 500);
+  </script>
+</body>
+</html>
